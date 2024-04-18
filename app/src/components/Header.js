@@ -10,10 +10,10 @@ import { AppBar, Toolbar, Tabs, Tab, Typography } from '@mui/material';
 const Header= () =>{
   return (
     <div>
-      <AppBar position="fixed" sx={{ backgroundColor: '#FFA500' }}>
+      <AppBar position="fixed" sx={{ backgroundColor: '#FFB6C1' }}>
         <Toolbar>
           <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: 'white', flexGrow: 1, textAlign: 'left' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Kevin Tierney</Link>
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Michelle Parente</Link>
           </Typography>
 
           <Tabs value={false} textColor="inherit"sx={{
@@ -27,8 +27,8 @@ const Header= () =>{
               padding: '12px 14px',
             },
           }}>
-          <Tab component={Link} to="/projects" label="Projects" sx={{ color: 'white', textDecoration: 'none' }} />
-          <Tab component={Link} to="/resume" label="Resume" sx={{ color: 'white', textDecoration: 'none' }} />
+          <Tab component={Link} to="/services" label="Services" sx={{ color: 'white', textDecoration: 'none' }} />
+          <Tab component={Link} to="/contact" label="Contact Me" sx={{ color: 'white', textDecoration: 'none' }} />
           <Tab component={Link} to="/about" label="About Me" sx={{ color: 'white', textDecoration: 'none' }} />
           </Tabs>
         </Toolbar>

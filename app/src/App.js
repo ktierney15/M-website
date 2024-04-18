@@ -3,9 +3,12 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header"
-// import Foot er from './components/Footer'
+import Footer from './components/Footer'
 
 import Home from "./pages/Home"
+import Services from "./pages/Services"
+import Contact from "./pages/Contact"
+import About from "./pages/About"
 
 
 function App() {
@@ -17,12 +20,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
-            {/* <Route path="projects" element={<Projects />} />
-            <Route path="resume" element={<Resume />} />
-            <Route path="about" element={<About />} /> */}
+            <Route path="services" element={<Services />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
           </Route>
         </Routes>
       </BrowserRouter>
+    <Footer />
     </div>
   );
 }
