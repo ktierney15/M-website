@@ -1,5 +1,3 @@
-
-
 // https://blog.logrocket.com/creating-navbar-react/
 
 import React from 'react';
@@ -29,6 +27,7 @@ const Header= () =>{
           }}>
           <Tab component={Link} to="/services" label="Services" sx={{ color: 'white', textDecoration: 'none' }} />
           <Tab component={Link} to="/contact" label="Contact Me" sx={{ color: 'white', textDecoration: 'none' }} />
+          <Tab component={Link} to="/schedule" label="Schedule" sx={{ color: 'white', textDecoration: 'none' }} />
           <Tab component={Link} to="/about" label="About Me" sx={{ color: 'white', textDecoration: 'none' }} />
           </Tabs>
         </Toolbar>
