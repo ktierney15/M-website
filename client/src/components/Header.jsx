@@ -3,7 +3,7 @@
 // https://blog.logrocket.com/creating-navbar-react/
 
 import React from 'react';
-import {  Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { AppBar, Toolbar, Tabs, Tab, Typography } from '@mui/material';
 
 
