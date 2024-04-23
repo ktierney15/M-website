@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
     return (
-      <AppBar position="fixed" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: '#757575' }}>
+      <AppBar position="relative" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: '#757575' }}>
         <Container>
           <Toolbar>
             <Container color="inherit" style={{ marginRight: 'auto' }}>
