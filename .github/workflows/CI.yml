@@ -25,6 +25,10 @@ jobs:
       - name: Build and Lint
         run: npm run build
 
+      - name: Publish artifact
+        run: echo 'publish built artifact'
+      
+
   # Terraform-Build:
   #   needs: React-Build
   #   runs-on: ubuntu-latest
