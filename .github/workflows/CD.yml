@@ -35,22 +35,3 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ github.sha }}
-
-      - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 0.14.0
-
-      # - name: Terraform Init and Apply
-      #   run: |
-      #     cd IAC
-      #     terraform init
-      #     terraform apply -auto-approve
-      #   env:
-      #     TF_VAR_docker_user: ${{ secrets.DOCKER_USERNAME }}
-      #     TF_VAR_docker_pass: ${{ secrets.DOCKERHUB_TOKEN }}
-
-
-
-
-      # TODO: Add terraform init apply ...

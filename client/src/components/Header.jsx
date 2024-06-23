@@ -8,7 +8,7 @@ import { AppBar, Toolbar, Tabs, Tab, Typography } from '@mui/material';
 const Header= () =>{
   return (
     <div>
-      <AppBar position="fixed" sx={{ backgroundColor: '#FFB6C1' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#FFB6C1' }}>
         <Toolbar>
           <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: 'white', flexGrow: 1, textAlign: 'left' }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Michelle Parente</Link>
@@ -32,7 +32,7 @@ const Header= () =>{
           </Tabs>
         </Toolbar>
       </AppBar>
-    <div className='page-body' style={{ marginTop: '85px' }}>
+    <div className='page-body' >
         <Outlet />
     </div>
   </div>

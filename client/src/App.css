@@ -40,3 +40,31 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+/* Services */
+
+.paper{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  color: white;
+}
+
+.typography-card {
+  color: white;
+  text-align: center;
+}
+
+.button-card {
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  text-transform: none;
+}

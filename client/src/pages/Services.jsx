@@ -1,21 +1,59 @@
 import React from "react"
-import { Paper, Typography, Button, Grid } from '@mui/material';
+import { Box, Paper, Typography, Button, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { styled } from '@mui/system';
+
+// Import local images
+import test from '../assets/test.jpeg';
+import head1 from '../assets/head1.jpeg';
+
+const FullWidthImage = styled(Box)(({ theme }) => ({
+    width: '100%',
+    height: '100vh',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }));
+
+const TextOverlay = styled(Box)({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    color: 'white',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // semi-transparent overlay
+    padding: '20px',
+    textAlign: 'center',
+});
 
 const Services = () =>{
     return (
-        <div style={{ padding: 20 }}>
-            {/* image goes up here */}
-            <Grid container spacing={3}>
+        <div>
                 <Grid item xs={12} md={4}>
-                <Paper elevation={3} style={{ padding: 20, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <img src={head1} alt="head" style={{ width: '100%', height: 'auto' }} />
+                </Grid>
+                <Typography variant="h2" gutterBottom>
+                    Work With Me:                 
+                </Typography>
+                <Grid container spacing={3}>
+                <Grid item xs={12} md={4}>
+                <Paper elevation={3} style={{
+                            padding: 20,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: 'transparent',
+                            border: '2px solid #ccc',
+                            color: 'white'
+                        }}>
                     <Typography variant="h5" gutterBottom>
-                        1:1 HEALTH COACHING
+                        HEALTH COACHING
                     </Typography>
                     <Typography variant="body1" paragraph style={{ textAlign: 'center' }} gutterBottom>
                         Our initial sessions will be dedicated to assessing your current wellness and creating a personalized plan to fit your unique needs and goals.
                     </Typography>
-                    <Button component={Link} to="/contact" variant="contained" color="primary">
+                    <Button component={Link} to="/contact" variant="contained" style={{ color: 'white', border: '1px solid white' }}>
                         Book a free consultation
                     </Button>
                 </Paper>
@@ -36,7 +74,7 @@ const Services = () =>{
                 <Grid item xs={12} md={4}>
                 <Paper elevation={3} style={{ padding: 20, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <Typography variant="h5" gutterBottom>
-                        COREPOWER YOGA                    
+                        Group classes                   
                     </Typography>
                     <Typography variant="body1" paragraph style={{ textAlign: 'center' }} gutterBottom>
                         Since achieving wellness is more than just exercise and diet, I’ll be guiding you toward other helpful practices such as mindfulness training, aromatherapy, and more.                    
@@ -47,7 +85,17 @@ const Services = () =>{
                 </Paper>
                 </Grid>
             </Grid>
-            {/* image goes right here */}
+
+            {/* image section */}
+            <FullWidthImage sx={{ backgroundImage: `url(${test})` }}>
+                <TextOverlay>
+                <Typography variant="h4" align="center">
+                    HOW YOU’LL FEEL\nMORE CONFIDENT AND BALANCED AND WITH INCREASED ENERGY, VITALITY, AND JOY
+                </Typography>
+                </TextOverlay>
+            </FullWidthImage>
+
+            {/* List section */}
             <div style={{ marginTop: 20 }}>
             <Typography variant="h6" gutterBottom>
               Your Free Health Coaching Consultation Will Include
