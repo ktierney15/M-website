@@ -48,10 +48,8 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: 'Home', to: '/' },
     { label: 'Services', to: '/services' },
     { label: 'Contact Me', to: '/contact' },
-    { label: 'Schedule', to: '/schedule' },
     { label: 'About Me', to: '/about' },
   ];
 
@@ -59,7 +57,7 @@ const Header = () => {
     <ThemeProvider theme={theme}>
       <div>
         <AppBar 
-          position="fixed" 
+          position="fixed" // change to static if you dont want it to stay at the top
           sx={{ 
             backgroundColor: scrolled ? '#BCB88A' : 'white',
             transition: 'background-color 0.3s',

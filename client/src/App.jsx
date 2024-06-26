@@ -18,11 +18,9 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Header />}>
-                <Route index element={<Home />} />
                 <Route path="services" element={<Services />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="about" element={<About />} />
-                <Route path="schedule" element={<Schedule />} />
               </Route>
             </Routes>
           </BrowserRouter>
