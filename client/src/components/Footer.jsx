@@ -1,9 +1,16 @@
-import { React, useState } from 'react';
-import { IconButton, Link, Typography, Toolbar, AppBar, Container, TextField, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { Typography, Toolbar, AppBar, Container, TextField, Button, Box } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import InstagramIcon from '@mui/icons-material/Instagram';
-import AdjustIcon from '@mui/icons-material/Adjust';
 
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Raleway',
+      'Raleway',
+    ].join(','),
+  }
+});
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -15,25 +22,23 @@ const Footer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here you can implement logic to add the email to your mailing list
-    // For simplicity, we'll just log the email to the console
     console.log('Email submitted:', email);
-    // Clear the input field
     setEmail('');
-    // Set subscribed to true to show a confirmation message
     setSubscribed(true);
   };
 
-    return (
-      <AppBar position="relative" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: '#757575' }}>
-        <Container>
-          <Toolbar>
-            <Container color="inherit" style={{ marginRight: 'auto' }}>
-            <Typography variant="h5">JOIN MY NEWSLETTER</Typography>
-              {subscribed ? (
-                <Typography variant="body1">Thank you for joining!</Typography>
-                  ) : (
-                <form onSubmit={handleSubmit}>
+  return (
+    <ThemeProvider theme={theme}>
+    <AppBar position="relative" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: '#ffe4ec' }}>
+      <Container style={{ textAlign: 'center', backgroundColor: '#ffe4ec', padding: '20px', borderRadius: '8px' }}>
+        <Toolbar style={{ justifyContent: 'center' }}>
+          <Container>
+            <Typography variant="h5" style={{ color: '#000000', marginBottom: '10px' }}>JOIN MY NEWSLETTER</Typography>
+            {subscribed ? (
+              <Typography variant="body1" style={{ color: '#000000' }}>Thank you for joining!</Typography>
+            ) : (
+              <form onSubmit={handleSubmit} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Box style={{ display: 'flex', alignItems: 'center' }}>
                   <TextField
                     label="Enter your email"
                     variant="outlined"
@@ -41,31 +46,38 @@ const Footer = () => {
                     value={email}
                     onChange={handleInputChange}
                     required
+                    InputLabelProps={{ style: { color: '#000000' } }}
+                    InputProps={{ style: { color: '#000000', height: '40px' } }}
+                    style={{
+                      backgroundColor: '#ffffff',
+                      borderRadius: '4px',
+                      height: '40px',
+                    }}
                   />
-                  <Button variant="contained" color="primary" type="submit">
+                  <Button
+                    variant="contained"
+                    type="submit"
+                    style={{
+                      backgroundColor: '#000000',
+                      color: '#ffffff',
+                      height: '40px',
+                      marginLeft: '10px',
+                      borderRadius: '4px',
+                      minWidth: '80px',
+                    }}
+                  >
                     Join
                   </Button>
-                </form>
-              )}
-            </Container>
-            {/* <Typography variant="body2" color="inherit" style={{ marginRight: 'auto' }}>
-            Sign up for My newsletter
-            </Typography> */}
-            <Link href="https://www.corepoweryoga.com/content/teachers/7f5b4bc1-7a2f-4731-bab6-518ff012b399" target="_blank" color="inherit">
-              <IconButton>
-                <AdjustIcon />
-              </IconButton>
-            </Link>
-            <Link href="https://www.instagram.com/michelleeparente/" target="_blank" color="inherit">
-              <IconButton>
-                <InstagramIcon />
-              </IconButton>
-            </Link>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    );
-  };
-  
-  
-  export default Footer;
+                </Box>
+              </form>
+            )}
+          </Container>
+        </Toolbar>
+      </Container>
+    </AppBar>
+    </ThemeProvider>
+
+  );
+};
+
+export default Footer;
