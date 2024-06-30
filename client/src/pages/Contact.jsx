@@ -26,7 +26,7 @@ const Contact = () =>{
             <div style={{ paddingTop: 150 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
-                    <div>
+                    <div style={{ color: "black" }}>
                         <Typography variant="h4" gutterBottom>
                             LET’S WORK TOGETHER
                         </Typography>

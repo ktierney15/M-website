@@ -7,7 +7,7 @@ import portrait1 from '../assets/portrait1.jpeg';
 const About = () =>{
     return (
         <div>
-             <div style={{ paddingTop: 150 }}>
+             <div style={{ paddingTop: 150, color: "black" }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
                         <img src={portrait1} alt="Michelle" style={{ width: '100%', height: 'auto' }} />
