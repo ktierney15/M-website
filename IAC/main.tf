@@ -17,7 +17,7 @@ locals {
 
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-files"
+    bucket         = "kt15-terraform-state-files"
     key            = "${var.app_name}/terraform.tfstate"
     region         = "us-east-1"
   }

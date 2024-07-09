@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = var.app_name
+  bucket = "kt15-${var.app_name}"
   tags = {
     "Github Repository" = "https://github.com/ktierney15/${var.app_name}"
     "Version" = var.version
@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
-  bucket = var.app_name
+  bucket = "kt15-${var.app_name}"
   policy = data.aws_iam_policy_document.cloudfront.json
 }
 
