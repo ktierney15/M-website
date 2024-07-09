@@ -7,19 +7,34 @@ on:
   workflow_dispatch:
 
 jobs:
-  Docker-Build:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Build Docker image
-        run: docker build -t react-app .
+      - name: Set up NodeJS environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
 
-      - name: Run Docker container
-        run: docker run -d -p 3000:80 react-app
+      - name: Install package dependencies
+        run: npm install
 
-  Version-and-Publish:
-    needs: Docker-Build
+#       - name: Check linting and formatting
+#         run: |
+#           npm install -g eslint
+#           eslint **/src/*.js
+
+
+# # TODO: create unit testing
+#       # - name: Execute test cases
+#       #   run: npm run test
+      
+      - name: Build app
+        run: npm run build
+
+  Version:
+    needs: Build
     runs-on: ubuntu-latest
     if: github.event_name != 'pull_request'
     steps:

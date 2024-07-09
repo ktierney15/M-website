@@ -8,6 +8,23 @@ variable "aws_secret_key" {
   default     = ""
 }
 
-variable "application_version" {
-    description = "version of the applicaiton that we are deploying to ecs"
+variable "app_name" {
+  description = "name of application"
+}
+
+variable "version" {
+  description = "version of application"
+}
+
+variable "source_path" {
+  description = "location of your application code"
+}
+
+variable "cloudfront_origin_path" {
+  description = "cloudfront origin path"
+}
+
+variable "default_root_object" {
+  description = "root object"
+  default = "index.html"
 }
