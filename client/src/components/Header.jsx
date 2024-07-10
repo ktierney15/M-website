@@ -164,19 +164,10 @@ const Header = () => {
             </MenuItem>
           ))}
         </Menu>
-        <Box 
-          className='page-body' 
-          sx={{ 
-            padding: '20px', 
-            background: 'white', 
-            minHeight: '2000px' 
-          }}
-        >
-          <Outlet />
-        </Box>
       </div>
     </ThemeProvider>
   );
 }
 
 export default Header;
+
