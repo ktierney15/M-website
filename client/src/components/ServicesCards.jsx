@@ -13,6 +13,7 @@ const ServicesCard = ({ title, description, link, image }) => {
             marginBottom: 20,
             // marginTop: 20,
             textDecoration: 'none',
+            // padding: 10
         },
         cardPaper: {
             position: 'relative',

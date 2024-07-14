@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
 import ServiceCards from "../components/ServicesCards"
+import BookConsultation from '../components/BookConsultation';
 
 // Import local images
 import pillars from "../assets/pillars.png"
@@ -79,11 +80,11 @@ const HomePage = () => {
       {/* Image Section */}
       {/* <FullWidthImage sx={{ backgroundImage: `url(${sections.section1.image})` }} /> */}
 
-      {/* Cards Section */}
       <ServiceCards />
+      <BookConsultation />
 
       {/* Image and List Section */}
-      <Box width="100%" p={4}>
+      {/* <Box width="100%" p={4}>
         <Grid container alignItems="center">
           <Grid item xs={12} md={6}>
             <FullWidthImage sx={{ height: '70vh', backgroundSize: 'contain', backgroundImage: `url(${sections.section2.image})` }} />
@@ -100,17 +101,7 @@ const HomePage = () => {
             </Box>
           </Grid>
         </Grid>
-      </Box>
-
-      {/* Text and Image with Button Section */}
-      <FullWidthImage sx={{ backgroundImage: `url(${sections.section3.image})` }}>
-        <TextOverlay flexDirection="column">
-          <Typography variant="h5" align="center" mb={2}>
-            {sections.section3.text}
-          </Typography>
-          <Button variant="contained" color="primary">Book Now</Button>
-        </TextOverlay>
-      </FullWidthImage>
+      </Box> */}
     </div>
   );
 };
