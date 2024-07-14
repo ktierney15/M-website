@@ -99,7 +99,7 @@ const BookConsultation = () => {
         <Typography variant="body1" align="center" mb={2}>
           {sections.section3.text}
         </Typography>
-        <Button variant="contained" sx={{ backgroundColor: '#BCB88A', color: 'white', '&:hover': { backgroundColor: '#BCB88A' } }}>Book Now</Button>
+        <Button variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Book Now</Button>
         <WhiteLine style={{ bottom: '10%' }} />
       </TextOverlay>
     </FullWidthImage>

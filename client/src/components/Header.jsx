@@ -59,7 +59,7 @@ const Header = () => {
         <AppBar 
           position="fixed" // change to static if you dont want it to stay at the top
           sx={{ 
-            backgroundColor: scrolled ? '#BCB88A' : 'white',
+            backgroundColor: scrolled ? '#9FA485' : 'white',
             transition: 'background-color 0.3s',
             height: '140px',
             boxShadow: 'none',
@@ -71,7 +71,7 @@ const Header = () => {
               component="div" 
               sx={{ 
                 fontWeight: 'bold', 
-                color: scrolled ? 'white' : '#BCB88A',
+                color: scrolled ? 'white' : '#9FA485',
                 textAlign: 'center',
                 paddingTop: '10px',
               }}
@@ -87,7 +87,7 @@ const Header = () => {
                   color="inherit"
                   aria-label="menu"
                   onClick={handleMenuOpen}
-                  sx={{ color: scrolled ? 'white' : '#BCB88A' }}
+                  sx={{ color: scrolled ? 'white' : '#9FA485' }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -101,7 +101,7 @@ const Header = () => {
                       backgroundColor: 'white',
                     },
                     '& .MuiTab-root': {
-                      color: scrolled ? 'white' : '#BCB88A',
+                      color: scrolled ? 'white' : '#9FA485', //'#BCB88A',
                       textDecoration: 'none',
                       fontSize: '1.1rem',
                       padding: '8px 12px',
@@ -125,12 +125,12 @@ const Header = () => {
               <Box sx={{ flexGrow: 1, textAlign: 'right' }}>
                 <Link href="https://www.corepoweryoga.com/content/teachers/7f5b4bc1-7a2f-4731-bab6-518ff012b399" target="_blank" color="inherit">
                   <IconButton>
-                    <AdjustIcon sx={{ color: scrolled ? 'white' : '#BCB88A' }} />
+                    <AdjustIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                   </IconButton>
                 </Link>
                 <Link href="https://www.instagram.com/michelleeparente/" target="_blank" color="inherit">
                   <IconButton>
-                    <InstagramIcon sx={{ color: scrolled ? 'white' : '#BCB88A' }} />
+                    <InstagramIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                   </IconButton>
                 </Link>
               </Box>
@@ -143,7 +143,7 @@ const Header = () => {
           onClose={handleMenuClose}
           sx={{
             '& .MuiPaper-root': {
-              backgroundColor: scrolled ? '#BCB88A' : 'white',
+              backgroundColor: scrolled ? '#9FA485' : 'white',
             },
           }}
         >
@@ -154,7 +154,7 @@ const Header = () => {
               component={RouterLink}
               to={item.to}
               sx={{
-                color: scrolled ? 'white' : '#BCB88A',
+                color: scrolled ? 'white' : '#9FA485',
                 '&:hover': {
                   backgroundColor: scrolled ? '#A9A692' : '#F0F0F0',
                 },
