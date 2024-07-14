@@ -63,12 +63,13 @@ const TextOverlay = styled(Box)({
 const FullWidthSection = styled(Box)(({ theme }) => ({
   width: '100%',
   textAlign: 'center',
-  padding: theme.spacing(8, 2),
+  paddingTop: 150,
+  paddingBottom: 50,
 }));
 
 const HomePage = () => {
   return (
-    <div style={{ paddingTop: 100 }}>
+    <div>
       {/* Header Section */}
       <FullWidthSection>
         <Typography variant="h5">{sections.section1.textSmall}</Typography>
@@ -76,7 +77,7 @@ const HomePage = () => {
       </FullWidthSection>
 
       {/* Image Section */}
-      <FullWidthImage sx={{ backgroundImage: `url(${sections.section1.image})` }} />
+      {/* <FullWidthImage sx={{ backgroundImage: `url(${sections.section1.image})` }} /> */}
 
       {/* Cards Section */}
       <ServiceCards />
