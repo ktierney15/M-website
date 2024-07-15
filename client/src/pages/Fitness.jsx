@@ -30,7 +30,7 @@ const TextOverlay = styled(Box)({
     textAlign: 'center',
 });
 
-const Nutrition = () =>{
+const Fitness = () =>{
     return (
         <div style={{ paddingTop: 150 }}>
                 <Grid item xs={12} md={4}>
@@ -74,4 +74,4 @@ const Nutrition = () =>{
     )
 }
 
-export default Nutrition
+export default Fitness

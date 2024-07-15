@@ -11,7 +11,6 @@ const ServicesCard = ({ title, description, link, image }) => {
             position: 'relative',
             overflow: 'hidden',
             marginBottom: 20,
-            // marginTop: 20,
             textDecoration: 'none',
         },
         cardPaper: {
@@ -24,7 +23,6 @@ const ServicesCard = ({ title, description, link, image }) => {
             alignItems: 'center',
             color: 'white',
             textAlign: 'center',
-            // margin: 5
         },
         cardContent: {
             zIndex: 2,

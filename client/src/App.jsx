@@ -5,10 +5,10 @@ import Header from "./components/Header"
 import Footer from './components/Footer'
 
 import Home from "./pages/Home"
-import Services from "./pages/Services"
+import Nutrition from "./pages/Nutrition"
+import Fitness from "./pages/Fitness"
 import Contact from "./pages/Contact"
 import About from "./pages/About"
-// import './App.css'
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="services" element={<Services />} />
+              <Route path="nutrition" element={<Nutrition />} />
+              <Route path="fitness" element={<Fitness />} />
               <Route path="contact" element={<Contact />} />
               <Route path="about" element={<About />} />
             </Routes>

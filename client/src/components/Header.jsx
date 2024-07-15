@@ -48,8 +48,9 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: 'Services', to: '/services' },
-    { label: 'Contact Me', to: '/contact' },
+    { label: 'Nutrition', to: '/nutrition' },
+    { label: 'Fitness', to: '/fitness' },
+    { label: 'Contact', to: '/contact' },
     { label: 'About Me', to: '/about' },
   ];
 
