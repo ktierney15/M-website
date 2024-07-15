@@ -8,7 +8,6 @@ import Home from "./pages/Home"
 import Services from "./pages/Services"
 import Contact from "./pages/Contact"
 import About from "./pages/About"
-import Schedule from "./pages/Schedule"
 // import './App.css'
 
 function App() {

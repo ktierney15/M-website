@@ -13,18 +13,18 @@ const ServicesCard = ({ title, description, link, image }) => {
             marginBottom: 20,
             // marginTop: 20,
             textDecoration: 'none',
-            // padding: 10
         },
         cardPaper: {
             position: 'relative',
             width: '100%',
-            height: 300, // Adjust as needed
+            height: '60vh', // Adjust as needed
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-end',
             alignItems: 'center',
             color: 'white',
             textAlign: 'center',
+            // margin: 5
         },
         cardContent: {
             zIndex: 2,

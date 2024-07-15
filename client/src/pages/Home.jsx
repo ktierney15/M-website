@@ -79,8 +79,9 @@ const HomePage = () => {
 
       {/* Image Section */}
       {/* <FullWidthImage sx={{ backgroundImage: `url(${sections.section1.image})` }} /> */}
-
-      <ServiceCards />
+      <div style={{marginLeft: 10, marginRight: 10}}>
+        <ServiceCards />
+      </div>
       <BookConsultation />
 
       {/* Image and List Section */}
