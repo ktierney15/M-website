@@ -9,8 +9,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 const theme = createTheme({
   typography: {
     fontFamily: [
-      'Raleway',
-      'Raleway',
+      "Tenor Sans",
+      "Tenor Sans",
     ].join(','),
   },
   palette: {
