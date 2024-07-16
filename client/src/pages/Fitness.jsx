@@ -1,15 +1,11 @@
-import React from "react"
-import { Box, Paper, Typography, Button, Grid } from '@mui/material';
+import React from "react";
+import { Box, Typography, Button, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
 // Import local images
-import pose from "../assets/pose.jpeg"
+import pose from "../assets/pose.jpeg";
 import head1 from '../assets/head1.jpeg';
-
-// components
-import ServiceCards from "../components/ServicesCards"
-
 
 const FullWidthImage = styled(Box)(({ theme }) => ({
     width: '100%',
@@ -17,7 +13,7 @@ const FullWidthImage = styled(Box)(({ theme }) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-  }));
+}));
 
 const TextOverlay = styled(Box)({
     display: 'flex',
@@ -30,48 +26,83 @@ const TextOverlay = styled(Box)({
     textAlign: 'center',
 });
 
-const Fitness = () =>{
+const Fitness = () => {
     return (
         <div style={{ paddingTop: 150 }}>
-                <Grid item xs={12} md={4}>
-                    <img src={head1} alt="head" style={{ width: '100%', height: 'auto' }} />
+            {/* 1:1 Section */}
+            <Grid container spacing={0} sx={{ height: '50vh', padding: 2 }}>
+                <Grid item xs={12} md={6}>
+                    <Box
+                        sx={{
+                            backgroundImage: `url(${pose})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            height: '100%',
+                            borderRadius: '1%',
+                            marginRight: 10
+                        }}
+                    />
                 </Grid>
-                <Typography variant="h2" style={{ color: 'black' }} gutterBottom>
-                    Work With Me:                 
-                </Typography>
-            
-            {/* Service Cards */}
-            <ServiceCards />
+                <Grid item xs={12} md={6} display="flex" justifyContent="center" alignItems="center">
+                    <Box textAlign="center">
+                        <Typography variant="h4" gutterBottom>
+                            1:1 Coaching
+                        </Typography>
+                        <Typography variant="body1" gutterBottom>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </Typography>
+                        {/* <Button component={Link} to="/section1" variant="contained" color="primary">
+                            Learn More
+                        </Button> */}
+                        <Button component={Link} to="/contact" variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Book with Me</Button>
+                    </Box>
+                </Grid>
+            </Grid>
 
-            {/* image section */}
+            {/* Group Section */}
+            <Grid container spacing={0} sx={{ height: '50vh', padding: 2 }}>
+                <Grid item xs={12} md={6} display="flex" justifyContent="center" alignItems="center">
+                    <Box textAlign="center">
+                        <Typography variant="h4" gutterBottom>
+                            Group Classes
+                        </Typography>
+                        <Typography variant="body1" gutterBottom>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </Typography>
+                        <Button component={Link} to="/contact" variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Book with Me</Button>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Box
+                        sx={{
+                            backgroundImage: `url(${pose})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            height: '100%',
+                            borderRadius: '1%',
+                            marginLeft: 10
+                        }}
+                    />
+                </Grid>
+            </Grid>
+
+            {/* Existing image section */}
             <FullWidthImage sx={{ backgroundImage: `url(${pose})` }}>
                 <TextOverlay style={{ padding: 20, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                <Typography variant="h6" align="center" gutterBottom>
-                    HOW YOU’LL FEEL
-                </Typography>
-                <Typography variant="h4" align="center">
-                    MORE CONFIDENT AND BALANCED AND WITH INCREASED ENERGY, VITALITY, AND JOY
-                </Typography>
+                    <Typography variant="h6" align="center" gutterBottom>
+                        HOW YOU’LL FEEL
+                    </Typography>
+                    <Typography variant="h4" align="center">
+                        MORE CONFIDENT AND BALANCED AND WITH INCREASED ENERGY, VITALITY, AND JOY
+                    </Typography>
                 </TextOverlay>
             </FullWidthImage>
 
-            {/* List section */}
-            <div style={{ marginTop: 100, color: 'black' }}>
-            <Typography variant="h6" gutterBottom>
-              Your Free Health Coaching Consultation Will Include
-            </Typography>
-            <ul>
-              <li>Comprehensive wellness assessment</li>
-              <li>Personalized nutrition, mindfulness, and exercise plan to help you reach your goals</li>
-              <li>Unlimited guidance and support via email</li>
-              <li>Helpful tools, tips, and tricks for navigating your unique obstacles</li>
-            </ul>
-            <Button component={Link} to="/contact" variant="contained" color="primary">
-                Book a free consultation                 
-            </Button>
-          </div>
+            <Grid item xs={12} md={4}>
+                <img src={head1} alt="head" style={{ width: '100%', height: 'auto' }} />
+            </Grid>
         </div>
-    )
-}
+    );
+};
 
-export default Fitness
+export default Fitness;

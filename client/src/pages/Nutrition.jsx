@@ -37,7 +37,7 @@ const Nutrition = () =>{
                 Work With Me:                 
             </Typography>
             {/* List section */}
-            <div style={{ color: 'black', marginLeft: '30%' }}>
+            <div style={{ color: 'black' }}>
                 <Typography variant="h6" gutterBottom>
                 Your Free Health Coaching Consultation Will Include
                 </Typography>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import pose from "../assets/pose.jpeg"
 import portrait from "../assets/portrait1.jpeg"
+import food from "../assets/food1.webp"
 
 const ServicesCard = ({ title, description, link, image }) => {
     const styles = {
@@ -40,7 +41,7 @@ const ServicesCard = ({ title, description, link, image }) => {
             backgroundPosition: 'center',
             zIndex: 1,
             transition: 'filter 0.3s ease',
-            filter: 'brightness(70%)',
+            filter: 'brightness(60%)',
             borderRadius: '1%',
         },
     };
@@ -77,7 +78,7 @@ const ServicesCards = () => {
                 title="HEALTH COACHING"
                 description="Our initial sessions will be dedicated to assessing your current wellness and creating a personalized plan to fit your unique needs and goals."
                 link="/nutrition"
-                image={portrait}
+                image={food}
             />
             <ServicesCard
                 title="PRIVATE FITNESS"
