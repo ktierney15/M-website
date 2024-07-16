@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Typography, Paper, Button, Grid } from '@mui/material';
-import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
 import ServiceCards from "../components/ServicesCards"
@@ -35,11 +34,11 @@ const sections = {
       "nervous system health"
     ],
   },
-  section3: {
-    image: pose,
-    text: `WE’LL CREATE A PLAN THAT WORKS FOR YOU
-Through my personalized coaching, I’ll work alongside you to develop an integrated plan to achieve full body wellness—often combining the practices of nutrition, exercise, lifestyle habits, and more. I will help you tune back into yourself, address the root cause of your symptoms, and unlock your full potential.`,
-  },
+//   section3: {
+//     image: pose,
+//     text: `WE’LL CREATE A PLAN THAT WORKS FOR YOU
+// Through my personalized coaching, I’ll work alongside you to develop an integrated plan to achieve full body wellness—often combining the practices of nutrition, exercise, lifestyle habits, and more. I will help you tune back into yourself, address the root cause of your symptoms, and unlock your full potential.`,
+//   },
 };
 
 const FullWidthImage = styled(Box)(({ theme }) => ({
@@ -50,16 +49,16 @@ const FullWidthImage = styled(Box)(({ theme }) => ({
   backgroundRepeat: 'no-repeat',
 }));
 
-const TextOverlay = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '100%',
-  color: 'white',
-  backgroundColor: 'rgba(0, 0, 0, 0.5)', // semi-transparent overlay
-  padding: '20px',
-  textAlign: 'center',
-});
+// const TextOverlay = styled(Box)({
+//   display: 'flex',
+//   alignItems: 'center',
+//   justifyContent: 'center',
+//   height: '100%',
+//   color: 'white',
+//   backgroundColor: 'rgba(0, 0, 0, 0.5)', // semi-transparent overlay
+//   padding: '20px',
+//   textAlign: 'center',
+// });
 
 const FullWidthSection = styled(Box)(({ theme }) => ({
   width: '100%',
