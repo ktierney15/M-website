@@ -31,7 +31,7 @@ const Footer = () => {
     <ThemeProvider theme={theme}>
     <AppBar position="relative" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: '#ffe4ec' }}>
       <Container style={{ textAlign: 'center', backgroundColor: '#ffe4ec', padding: '20px', borderRadius: '8px' }}>
-        <Toolbar style={{ justifyContent: 'center' }}>
+        <Toolbar style={{ justifyContent: 'center', margin: 35 }}>
           <Container>
             <Typography variant="h5" style={{ color: '#000000', marginBottom: '10px' }}>JOIN MY NEWSLETTER</Typography>
             {subscribed ? (

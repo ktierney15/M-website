@@ -23,6 +23,7 @@ const ServicesCard = ({ title, description, link, image }) => {
             alignItems: 'center',
             color: 'white',
             textAlign: 'center',
+            borderRadius: '1%',
         },
         cardContent: {
             zIndex: 2,
@@ -40,6 +41,7 @@ const ServicesCard = ({ title, description, link, image }) => {
             zIndex: 1,
             transition: 'filter 0.3s ease',
             filter: 'brightness(70%)',
+            borderRadius: '1%',
         },
     };
 

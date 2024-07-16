@@ -78,7 +78,6 @@ const HomePage = () => {
       </FullWidthSection>
 
       {/* Image Section */}
-      {/* <FullWidthImage sx={{ backgroundImage: `url(${sections.section1.image})` }} /> */}
       <div style={{marginLeft: 10, marginRight: 10}}>
         <ServiceCards />
       </div>
