@@ -13,7 +13,7 @@ import pose from "../assets/pose.jpeg"
 const sections = {
   section1: {
     textSmall: "Let me help you",
-    textLarge: "unlock your best self",
+    textLarge: "UNLOCK YOUR BEST SELF",
     image: pose,
   },
   section2: {

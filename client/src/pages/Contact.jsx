@@ -57,7 +57,7 @@ const Contact = () =>{
                             value={textInput}
                             onChange={handleTextInputChange}
                         />
-                        <Button variant="contained" color="primary">Submit</Button>
+                        <Button variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Submit</Button>
                         </form>
                     </div>
                     </Grid>

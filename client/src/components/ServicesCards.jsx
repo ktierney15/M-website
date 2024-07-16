@@ -76,19 +76,19 @@ const ServicesCards = () => {
             <ServicesCard
                 title="HEALTH COACHING"
                 description="Our initial sessions will be dedicated to assessing your current wellness and creating a personalized plan to fit your unique needs and goals."
-                link="/contact"
+                link="/nutrition"
                 image={portrait}
             />
             <ServicesCard
                 title="PRIVATE FITNESS"
                 description="Unlock your full potential through personalized private fitness sessions, tailored to your goals to optimize both physical and mental well-being."
-                link="/contact"
+                link="/fitness"
                 image={pose}
             />
             <ServicesCard
                 title="GROUP CLASSES"
                 description="Since achieving wellness is more than just exercise and diet, I’ll be guiding you toward other helpful practices such as mindfulness training, aromatherapy, and more."
-                link="https://www.corepoweryoga.com/content/teachers/7f5b4bc1-7a2f-4731-bab6-518ff012b399"
+                link="/fitness"
                 image={pose}
             />
         </Grid>

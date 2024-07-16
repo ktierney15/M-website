@@ -33,7 +33,7 @@ const Footer = () => {
       <Container style={{ textAlign: 'center', backgroundColor: '#ffe4ec', padding: '20px', borderRadius: '8px' }}>
         <Toolbar style={{ justifyContent: 'center', margin: 35 }}>
           <Container>
-            <Typography variant="h5" style={{ color: '#000000', marginBottom: '10px' }}>JOIN MY NEWSLETTER</Typography>
+            <Typography variant="h5" style={{ color: '#000000', marginBottom: '15px' }}>JOIN MY NEWSLETTER</Typography>
             {subscribed ? (
               <Typography variant="body1" style={{ color: '#000000' }}>Thank you for joining!</Typography>
             ) : (

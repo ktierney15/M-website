@@ -47,6 +47,7 @@
 // export default BookConsultation;
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 
@@ -99,7 +100,7 @@ const BookConsultation = () => {
         <Typography variant="body1" align="center" mb={2}>
           {sections.section3.text}
         </Typography>
-        <Button variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Book Now</Button>
+        <Button component={Link} to="/contact" variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Book Now</Button>
         <WhiteLine style={{ bottom: '10%' }} />
       </TextOverlay>
     </FullWidthImage>

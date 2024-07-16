@@ -1,19 +1,24 @@
 import React from "react"
-import { Grid, Typography, Button } from '@mui/material';
+import { Grid, Typography, Button, Box } from '@mui/material';
 import { Link } from "react-router-dom";
 
 import portrait1 from '../assets/portrait1.jpeg';
+import head1 from '../assets/head1.jpeg';
+
 
 const About = () =>{
     return (
         <div>
              <div style={{ paddingTop: 150, color: "black" }}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} md={6}>
-                        <img src={portrait1} alt="Michelle" style={{ width: '100%', height: 'auto' }} />
+                    {/* <Grid item xs={12} md={6}>
+                        <img src={portrait1} alt="Michelle" style={{ width: '60%', height: 'auto' }} />
+                    </Grid> */}
+                    <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <img src={portrait1} alt="Michelle" style={{ width: '60%', height: 'auto', margin: 10 }} />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                    <div>
+                    <div style={{ margin: 10 }}>
                         <Typography variant="h4" gutterBottom>
                             HI, I’M MICHELLE PARENTE
                         </Typography>
@@ -38,11 +43,30 @@ const About = () =>{
                         <Typography variant="body1" paragraph>
                             National CPR Foundation, Standard - CPR / AED                         
                         </Typography>
-                        <Button component={Link} to="/services" variant="contained" color="primary">
+                        {/* <Button component={Link} to="/" variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>See my Services</Button> */}
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 5 }}>
+                            <Button
+                            component={Link}
+                            to="/"
+                            variant="contained"
+                            sx={{
+                                backgroundColor: '#9FA485',
+                                color: 'white',
+                                '&:hover': { backgroundColor: '#9FA485' },
+                                fontSize: '1rem',  // Increases the font size
+                                padding: '0.75rem 1.5rem',  // Increases the padding for a larger button
+                            }}
+                            >
                             See my Services
-                        </Button>
+                            </Button>
+                        </Box>
+                    
+                    
                     </div>
                     </Grid>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <img src={head1} alt="head" style={{ width: '100%', height: 'auto' }} />
                 </Grid>
             </div>
         </div>

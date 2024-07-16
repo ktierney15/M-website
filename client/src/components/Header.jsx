@@ -78,7 +78,7 @@ const Header = () => {
               }}
             >
               <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                Michelle Parente
+                MICHELLE PARENTE HEALTH
               </RouterLink>
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '10px' }}>
