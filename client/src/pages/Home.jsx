@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Paper, Button, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/system';
 
 import ServiceCards from "../components/ServicesCards"
@@ -34,11 +34,6 @@ const sections = {
       "nervous system health"
     ],
   },
-//   section3: {
-//     image: pose,
-//     text: `WE’LL CREATE A PLAN THAT WORKS FOR YOU
-// Through my personalized coaching, I’ll work alongside you to develop an integrated plan to achieve full body wellness—often combining the practices of nutrition, exercise, lifestyle habits, and more. I will help you tune back into yourself, address the root cause of your symptoms, and unlock your full potential.`,
-//   },
 };
 
 const FullWidthImage = styled(Box)(({ theme }) => ({
@@ -48,6 +43,15 @@ const FullWidthImage = styled(Box)(({ theme }) => ({
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
 }));
+
+const Line = styled(Box)({
+  position: 'absolute',
+  width: '80%',
+  height: '1px',
+  backgroundColor: 'black',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+});
 
 // const TextOverlay = styled(Box)({
 //   display: 'flex',
@@ -74,6 +78,7 @@ const HomePage = () => {
       <FullWidthSection>
         <Typography variant="h5">{sections.section1.textSmall}</Typography>
         <Typography variant="h2">{sections.section1.textLarge}</Typography>
+        <Line />
       </FullWidthSection>
 
       {/* Image Section */}
