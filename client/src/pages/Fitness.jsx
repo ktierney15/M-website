@@ -5,11 +5,14 @@ import { styled } from '@mui/system';
 
 // Import local images
 import pose from "../assets/pose.jpeg";
+import portrait from "../assets/portrait2.jpg";
 import head1 from '../assets/head1.jpeg';
+import group from "../assets/group1.jpg"
+
 
 const FullWidthImage = styled(Box)(({ theme }) => ({
     width: '100%',
-    height: '100vh',
+    height: '70vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -75,7 +78,7 @@ const Fitness = () => {
                 <Grid item xs={12} md={6}>
                     <Box
                         sx={{
-                            backgroundImage: `url(${pose})`,
+                            backgroundImage: `url(${group})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             height: '100%',
@@ -87,7 +90,7 @@ const Fitness = () => {
             </Grid>
 
             {/* Existing image section */}
-            <FullWidthImage sx={{ backgroundImage: `url(${pose})` }}>
+            <FullWidthImage sx={{ backgroundImage: `url(${portrait})` }}>
                 <TextOverlay style={{ padding: 20, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <Typography variant="h6" align="center" gutterBottom>
                         HOW YOU’LL FEEL

@@ -11,10 +11,7 @@ const About = () =>{
         <div>
              <div style={{ paddingTop: 150, color: "black" }}>
                 <Grid container spacing={3}>
-                    {/* <Grid item xs={12} md={6}>
-                        <img src={portrait1} alt="Michelle" style={{ width: '60%', height: 'auto' }} />
-                    </Grid> */}
-                    <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 30 }}>
                         <img src={portrait1} alt="Michelle" style={{ width: '60%', height: 'auto', margin: 10 }} />
                     </Grid>
                     <Grid item xs={12} md={6}>

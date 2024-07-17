@@ -4,6 +4,8 @@ import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 
 import pose from "../assets/pose.jpeg"
+import lemons from '../assets/lemons.webp';
+
 
 const TextOverlay = styled(Box)({
   display: 'flex',
@@ -36,7 +38,7 @@ const WhiteLine = styled(Box)({
 const BookConsultation = () => {
   const sections = {
     section3: {
-      image: pose,
+      image: lemons,
       header: "WE’LL CREATE A PLAN THAT WORKS FOR YOU",
       text: `Through my personalized coaching, I’ll work alongside you to develop an integrated plan to achieve full body wellness—often combining the practices of nutrition, exercise, lifestyle habits, and more. I will help you tune back into yourself, address the root cause of your symptoms, and unlock your full potential.`,
     },

@@ -3,8 +3,9 @@ import { Paper, Typography, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import pose from "../assets/pose.jpeg"
-import portrait from "../assets/portrait1.jpeg"
+import portrait from "../assets/portrait3.jpg";
 import food from "../assets/food1.webp"
+import group from "../assets/group2.jpg"
 
 const ServicesCard = ({ title, description, link, image }) => {
     const styles = {
@@ -84,13 +85,13 @@ const ServicesCards = () => {
                 title="PRIVATE FITNESS"
                 description="Unlock your full potential through personalized private fitness sessions, tailored to your goals to optimize both physical and mental well-being."
                 link="/fitness"
-                image={pose}
+                image={portrait}
             />
             <ServicesCard
                 title="GROUP CLASSES"
                 description="Since achieving wellness is more than just exercise and diet, I’ll be guiding you toward other helpful practices such as mindfulness training, aromatherapy, and more."
                 link="/fitness"
-                image={pose}
+                image={group}
             />
         </Grid>
     );

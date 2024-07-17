@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/system';
 
 import ServiceCards from "../components/ServicesCards"
@@ -53,22 +53,11 @@ const Line = styled(Box)({
   transform: 'translate(-50%, -50%)',
 });
 
-// const TextOverlay = styled(Box)({
-//   display: 'flex',
-//   alignItems: 'center',
-//   justifyContent: 'center',
-//   height: '100%',
-//   color: 'white',
-//   backgroundColor: 'rgba(0, 0, 0, 0.5)', // semi-transparent overlay
-//   padding: '20px',
-//   textAlign: 'center',
-// });
-
 const FullWidthSection = styled(Box)(({ theme }) => ({
   width: '100%',
   textAlign: 'center',
   paddingTop: 150,
-  paddingBottom: 50,
+  paddingBottom: 20,
 }));
 
 const HomePage = () => {

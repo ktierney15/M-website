@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Grid, Typography, TextField, Button, Checkbox, FormControlLabel, Hidden } from '@mui/material';
 
 import myImage from '../assets/portrait1.jpeg';
+import lemons from '../assets/lemons.webp';
 
 
 const Contact = () =>{
@@ -23,10 +24,10 @@ const Contact = () =>{
 
     return (
         <div>
-            <div style={{ paddingTop: 150 }}>
+            <div style={{ paddingTop: 150, paddingBottom: 40 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
-                    <div style={{ color: "black", margin: 10 }}>
+                    <div style={{ color: "black", margin: 10, padding: 10 }}>
                         <Typography variant="h4" gutterBottom>
                             LET’S WORK TOGETHER
                         </Typography>
@@ -62,8 +63,8 @@ const Contact = () =>{
                     </div>
                     </Grid>
                     <Hidden smDown>
-                        <Grid item xs={12} md={6}>
-                            <img src={myImage} alt="StockImage" style={{ width: '100%', height: '100vh' }} />
+                        <Grid item xs={12} md={6} style={{ textAlign: 'center' }}>
+                            <img src={lemons} alt="StockImage" style={{ width: '95wv', height: '80vh', filter: 'brightness(80%)', borderTopLeftRadius: '40%', borderTopRightRadius: '40%' }} />
                         </Grid>
                     </Hidden>
                 </Grid>
