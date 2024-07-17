@@ -29,8 +29,8 @@ const Footer = () => {
 
   return (
     <ThemeProvider theme={theme}>
-    <AppBar position="relative" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: '#ffe4ec' }}>
-      <Container style={{ textAlign: 'center', backgroundColor: '#ffe4ec', padding: '20px', borderRadius: '8px' }}>
+    <AppBar position="relative" color="primary" style={{ top: 'auto', bottom: 0, backgroundColor: '#E7D9CB' }}>
+      <Container style={{ textAlign: 'center', backgroundColor: '#E7D9CB', padding: '20px', borderRadius: '8px' }}>
         <Toolbar style={{ justifyContent: 'center', margin: 35 }}>
           <Container>
             <Typography variant="h5" style={{ color: '#000000', marginBottom: '35px' }}>JOIN MY NEWSLETTER</Typography>

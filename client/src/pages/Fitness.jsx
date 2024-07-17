@@ -34,7 +34,7 @@ const Fitness = () => {
         <div style={{ paddingTop: 150 }}>
             {/* 1:1 Section */}
             <Grid container spacing={0} sx={{ height: '50vh', padding: 2 }}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
                     <Box
                         sx={{
                             backgroundImage: `url(${pose})`,
@@ -54,9 +54,6 @@ const Fitness = () => {
                         <Typography variant="body1" gutterBottom>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </Typography>
-                        {/* <Button component={Link} to="/section1" variant="contained" color="primary">
-                            Learn More
-                        </Button> */}
                         <Button component={Link} to="/contact" variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Book with Me</Button>
                     </Box>
                 </Grid>
@@ -75,7 +72,7 @@ const Fitness = () => {
                         <Button component={Link} to="/contact" variant="contained" sx={{ backgroundColor: '#9FA485', color: 'white', '&:hover': { backgroundColor: '#9FA485' } }}>Book with Me</Button>
                     </Box>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
                     <Box
                         sx={{
                             backgroundImage: `url(${group})`,
@@ -89,7 +86,7 @@ const Fitness = () => {
                 </Grid>
             </Grid>
 
-            {/* Existing image section */}
+            {/* image section */}
             <FullWidthImage sx={{ backgroundImage: `url(${portrait})` }}>
                 <TextOverlay style={{ padding: 20, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                     <Typography variant="h6" align="center" gutterBottom>
