@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Box, IconButton, Link, Tabs, Tab, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -27,7 +27,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
-
+  const location = useLocation();
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -58,7 +59,7 @@ const Header = () => {
     <ThemeProvider theme={theme}>
       <div style={{ padding: 25 }}>
         <AppBar 
-          position="fixed" // change to static if you dont want it to stay at the top
+          position="fixed"
           sx={{ 
             backgroundColor: scrolled ? '#9FA485' : 'white',
             transition: 'background-color 0.3s',
@@ -67,7 +68,7 @@ const Header = () => {
             padding: 5,
           }}
         >
-          <Toolbar sx={{ minHeight: '60px', flexDirection: 'column', justifyContent: 'center' }}> {/* Ensure vertical layout */}
+          <Toolbar sx={{ minHeight: '60px', flexDirection: 'column', justifyContent: 'center' }}>
             <Typography 
               variant="h4" 
               component="div" 
@@ -96,14 +97,14 @@ const Header = () => {
               </Box>
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <Tabs 
-                  value={false} 
+                  value={menuItems.findIndex(item => item.to === location.pathname)} 
                   textColor="inherit" 
                   sx={{
                     '& .MuiTabs-indicator': {
-                      backgroundColor: 'white',
+                      backgroundColor: '#E7D9CB',
                     },
                     '& .MuiTab-root': {
-                      color: scrolled ? 'white' : '#9FA485', //'#BCB88A',
+                      color: scrolled ? 'white' : '#9FA485',
                       textDecoration: 'none',
                       fontSize: '1.1rem',
                       padding: '8px 12px',
@@ -111,6 +112,9 @@ const Header = () => {
                       display: 'flex',
                       alignItems: 'center',
                       gap: '6px',
+                    },
+                    '& .Mui-selected': {
+                      color: '#E7D9CB',
                     },
                   }}
                 >
@@ -172,4 +176,3 @@ const Header = () => {
 }
 
 export default Header;
-

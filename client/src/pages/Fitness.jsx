@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
 // Import local images
-import pose from "../assets/pose.jpeg";
+import pose from "../assets/pose2.jpeg";
 import portrait from "../assets/portrait2.jpg";
 import head1 from '../assets/head1.jpeg';
 import group from "../assets/group1.jpg"
