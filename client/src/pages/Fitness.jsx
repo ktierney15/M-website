@@ -31,9 +31,10 @@ const TextOverlay = styled(Box)({
 
 const Fitness = () => {
     return (
-        <div style={{ paddingTop: 150 }}>
+        <div style={{ paddingTop: 110 }}>
             {/* 1:1 Section */}
-            <Grid container spacing={0} sx={{ height: '50vh', padding: 2 }}>
+            <div style={{ padding: 10 }}>
+            <Grid container spacing={0} sx={{ height: '55vh', padding: 2, backgroundColor: '#E7D9CB' }}>
                 <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
                     <Box
                         sx={{
@@ -58,9 +59,11 @@ const Fitness = () => {
                     </Box>
                 </Grid>
             </Grid>
+            </div>
 
             {/* Group Section */}
-            <Grid container spacing={0} sx={{ height: '50vh', padding: 2 }}>
+            <div style={{ padding: 10 }}>
+            <Grid container spacing={0} sx={{ height: '55vh', padding: 2, backgroundColor: '#E7D9CB' }}>
                 <Grid item xs={12} md={6} display="flex" justifyContent="center" alignItems="center">
                     <Box textAlign="center">
                         <Typography variant="h4" gutterBottom>
@@ -85,6 +88,7 @@ const Fitness = () => {
                     />
                 </Grid>
             </Grid>
+            </div>
 
             {/* image section */}
             <FullWidthImage sx={{ backgroundImage: `url(${portrait})` }}>
@@ -92,7 +96,19 @@ const Fitness = () => {
                     <Typography variant="h6" align="center" gutterBottom>
                         HOW YOU’LL FEEL
                     </Typography>
-                    <Typography variant="h4" align="center">
+                    <Typography 
+                        variant="h4" 
+                        align="center" 
+                        mb={2} 
+                        sx={{ 
+                            paddingLeft: 30, 
+                            paddingRight: 30, 
+                            '@media (max-width: 600px)': {
+                            paddingLeft: 0,
+                            paddingRight: 0,
+                            },
+                        }}
+                        >
                         MORE CONFIDENT AND BALANCED AND WITH INCREASED ENERGY, VITALITY, AND JOY
                     </Typography>
                 </TextOverlay>

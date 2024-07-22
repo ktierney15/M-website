@@ -101,7 +101,7 @@ const Header = () => {
                   textColor="inherit" 
                   sx={{
                     '& .MuiTabs-indicator': {
-                      backgroundColor: '#E7D9CB',
+                      backgroundColor: scrolled ? 'white' : '#9FA485',
                     },
                     '& .MuiTab-root': {
                       color: scrolled ? 'white' : '#9FA485',
@@ -114,7 +114,7 @@ const Header = () => {
                       gap: '6px',
                     },
                     '& .Mui-selected': {
-                      color: '#E7D9CB',
+                      color: scrolled ? 'white' : '#9FA485',
                     },
                   }}
                 >
