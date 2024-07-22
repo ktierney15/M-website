@@ -2,7 +2,6 @@ import React from "react";
 import { Paper, Typography, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-import pose from "../assets/pose.jpeg"
 import portrait from "../assets/portrait3.jpg";
 import food from "../assets/food1.webp"
 import group from "../assets/group2.jpg"
@@ -43,8 +42,8 @@ const ServicesCard = ({ title, description, link, image }) => {
             zIndex: 1,
             // transition: 'filter 0.3s ease',
             transition: 'opacity 0.3s ease',
-            // filter: 'brightness(40%)',
-            opacity: '40%',
+            // filter: 'brightness(70%)',
+            opacity: '45%',
             borderRadius: '1%',
         },
     };
