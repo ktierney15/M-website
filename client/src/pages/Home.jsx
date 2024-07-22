@@ -8,6 +8,8 @@ import BookConsultation from '../components/BookConsultation';
 // Import local images
 import pillars from "../assets/pillars.png"
 import pose from "../assets/pose.jpeg"
+import head1 from '../assets/head1.jpeg';
+
 
 const sections = {
   section1: {
@@ -75,6 +77,11 @@ const HomePage = () => {
         <ServiceCards />
       </div>
       <BookConsultation />
+      <Grid item xs={12} md={4} style={{ margin: 0, padding: 0 }}>
+          <Box style={{ margin: 0, padding: 0 }}>
+              <img src={head1} alt="head" style={{ width: '100%', height: 'auto', display: 'block', margin: 0, padding: 0 }} />
+          </Box>
+      </Grid>
 
       {/* Image and List Section */}
       {/* <Box width="100%" p={4}>

@@ -35,7 +35,7 @@ const Footer = () => {
           <Container>
             <Typography variant="h5" style={{ color: '#000000', marginBottom: '35px' }}>JOIN MY NEWSLETTER</Typography>
             {subscribed ? (
-              <Typography variant="body1" style={{ color: '#000000' }}>Thank you for joining!</Typography>
+              <Typography variant="body1" style={{ color: '#000000' }}>Thank you! I am so excited to connect with you!</Typography>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Box style={{ display: 'flex', alignItems: 'center' }}>

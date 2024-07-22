@@ -7,6 +7,7 @@ import { styled } from '@mui/system';
 import pose from "../assets/pose.jpeg"
 import head1 from '../assets/head1.jpeg';
 
+
 // components
 import BookConsultation from "../components/BookConsultation"
 
@@ -50,6 +51,11 @@ const Nutrition = () =>{
             </div>
 
             <BookConsultation />
+            <Grid item xs={12} md={4} style={{ margin: 0, padding: 0 }}>
+                <Box style={{ margin: 0, padding: 0 }}>
+                    <img src={head1} alt="head" style={{ width: '100%', height: 'auto', display: 'block', margin: 0, padding: 0 }} />
+                </Box>
+            </Grid>
 
             {/* <Grid item xs={12} md={4}>
                 <img src={head1} alt="head" style={{ width: '100%', height: 'auto' }} />

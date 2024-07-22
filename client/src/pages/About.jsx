@@ -11,8 +11,13 @@ const About = () =>{
         <div>
              <div style={{ paddingTop: 150, color: "black" }}>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 30 }}>
+                    {/* <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 20 }}>
                         <img src={portrait1} alt="Michelle" style={{ width: '60%', height: 'auto', margin: 10 }} />
+                    </Grid> */}
+                    <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 20, overflow: 'hidden' }}>
+                    <div style={{ width: '80%', height: 'auto', position: 'relative' }}>
+                        <img src={portrait1} alt="Michelle" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
                     </Grid>
                     <Grid item xs={12} md={6}>
                     <div style={{ margin: 10 }}>
@@ -62,8 +67,10 @@ const About = () =>{
                     </div>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} md={4}>
-                    <img src={head1} alt="head" style={{ width: '100%', height: 'auto' }} />
+                <Grid item xs={12} md={4} style={{ margin: 0, padding: 0 }}>
+                    <Box style={{ margin: 0, padding: 0 }}>
+                        <img src={head1} alt="head" style={{ width: '100%', height: 'auto', display: 'block', margin: 0, padding: 0 }} />
+                    </Box>
                 </Grid>
             </div>
         </div>
