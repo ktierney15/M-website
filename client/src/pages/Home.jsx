@@ -50,7 +50,7 @@ const Line = styled(Box)({
   position: 'absolute',
   width: '80%',
   height: '1px',
-  backgroundColor: 'black',
+  backgroundColor: 'white',
   left: '50%',
   transform: 'translate(-50%, -50%)',
 });
@@ -58,14 +58,26 @@ const Line = styled(Box)({
 const FullWidthSection = styled(Box)(({ theme }) => ({
   width: '100%',
   textAlign: 'center',
-  paddingTop: 150,
+  marginTop: 110,
+  paddingTop: 40,
   paddingBottom: 20,
+  color: 'white',
+  '& h2': {
+    fontSize: '3rem', // Default font size for larger screens
+    [theme.breakpoints.down('md')]: {
+      fontSize: '3rem', // Font size for medium screens
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.5rem', // Font size for small screens
+    },
+  },
 }));
 
 const HomePage = () => {
   return (
     <div>
       {/* Header Section */}
+      <div style={{ backgroundColor: '#94685E', margin: 20 }}>
       <FullWidthSection>
         <Typography variant="h5">{sections.section1.textSmall}</Typography>
         <Typography variant="h2">{sections.section1.textLarge}</Typography>
@@ -73,9 +85,11 @@ const HomePage = () => {
       </FullWidthSection>
 
       {/* Image Section */}
-      <div style={{marginLeft: 10, marginRight: 10}}>
+      <div style={{marginLeft: 40, marginRight: 40}}>
         <ServiceCards />
       </div>
+      </div>
+
       <BookConsultation />
       <Grid item xs={12} md={4} style={{ margin: 0, padding: 0 }}>
           <Box style={{ margin: 0, padding: 0 }}>
