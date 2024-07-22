@@ -56,14 +56,15 @@ const Header = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <div style={{ padding: 25 }}>
         <AppBar 
           position="fixed" // change to static if you dont want it to stay at the top
           sx={{ 
             backgroundColor: scrolled ? '#9FA485' : 'white',
             transition: 'background-color 0.3s',
-            height: '140px',
+            height: '160px',
             boxShadow: 'none',
+            padding: 5,
           }}
         >
           <Toolbar sx={{ minHeight: '60px', flexDirection: 'column', justifyContent: 'center' }}> {/* Ensure vertical layout */}

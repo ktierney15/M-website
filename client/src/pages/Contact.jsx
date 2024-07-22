@@ -64,7 +64,7 @@ const Contact = () =>{
                     </Grid>
                     <Hidden smDown>
                         <Grid item xs={12} md={6} style={{ textAlign: 'center' }}>
-                            <img src={lemons} alt="StockImage" style={{ width: '95wv', height: '80vh', filter: 'brightness(80%)', borderTopLeftRadius: '40%', borderTopRightRadius: '40%' }} />
+                            <img src={lemons} alt="StockImage" style={{ width: '80%', height: '80vh', filter: 'brightness(80%)', borderTopLeftRadius: '50%', borderTopRightRadius: '50%' }} />
                         </Grid>
                     </Hidden>
                 </Grid>
