@@ -49,9 +49,9 @@ const About = () =>{
                                     to="/"
                                     variant="contained"
                                     sx={{
-                                        backgroundColor: '#9FA485',
+                                        backgroundColor: 'black',
                                         color: 'white',
-                                        '&:hover': { backgroundColor: '#9FA485' },
+                                        '&:hover': { backgroundColor: 'black' },
                                         fontSize: '1rem',
                                         padding: '0.75rem 1.5rem',
                                     }}
