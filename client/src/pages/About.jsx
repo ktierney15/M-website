@@ -31,7 +31,7 @@ const About = () =>{
                             </Typography>
                             <Box sx={{ textAlign: 'center', marginTop: 4 }}>
                                 <Typography variant="h6" gutterBottom>
-                                    Certifications
+                                    | CERTIFICATIONS |
                                 </Typography>
                                 <Typography variant="body1" paragraph>
                                     Institute for Integrative Nutrition, Integrative Nutrition Health Coach (INHC)                        
