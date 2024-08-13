@@ -118,20 +118,21 @@ const Header = () => {
                   </IconButton>
                 </Link>
               </Box>
-              <Button
-                component={Link} 
-                to="/contact"  
-                variant="contained" 
-                color="primary"
-                sx={{ 
-                  backgroundColor: 'black', 
-                  color: 'white', 
-                  textTransform: 'none' 
-                }}
-                onClick={handleMenuOpen}
-              >
-                Work With Me
-              </Button>
+              <Button 
+                  variant="contained" 
+                  color="secondary" 
+                  component={RouterLink} 
+                  to="/contact" 
+                  sx={{ 
+                    backgroundColor: scrolled ? 'white' : '#9FA485', 
+                    color: scrolled ? '#9FA485' : 'white',
+                    '&:hover': {
+                      backgroundColor: scrolled ? '#F0F0F0' : '#A9A692',
+                    },
+                  }}
+                >
+                  Work with Me
+                </Button>
             </Box>
           </Toolbar>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', paddingTop: '10px' }}>
@@ -195,19 +196,21 @@ const Header = () => {
             </MenuItem>
           ))}
           <MenuItem onClick={handleMenuClose} sx={{ justifyContent: 'center', color: scrolled ? 'white' : '#9FA485' }}>
-            <Button
-              component={Link} 
-              to="/contact"  
-              variant="contained" 
-              color="primary"
-              sx={{ 
-                backgroundColor: 'black', 
-                color: 'white', 
-                textTransform: 'none' 
-              }}
-            >
-              Work With Me
-            </Button>
+            <Button 
+                  variant="contained" 
+                  color="secondary" 
+                  component={RouterLink} 
+                  to="/contact" 
+                  sx={{ 
+                    backgroundColor: scrolled ? 'white' : '#9FA485', 
+                    color: scrolled ? '#9FA485' : 'white',
+                    '&:hover': {
+                      backgroundColor: scrolled ? '#F0F0F0' : '#A9A692',
+                    },
+                  }}
+                >
+                  Work with Me
+                </Button>
           </MenuItem>
         </Menu>
       </div>
@@ -216,3 +219,5 @@ const Header = () => {
 }
 
 export default Header;
+
+

@@ -29,7 +29,9 @@ const ServicesCard = ({ title, description, link, image }) => {
         cardContent: {
             zIndex: 2,
             padding: 20,
-            color: 'black',
+            color: 'white',
+            // color: 'black',
+            // textShadow: '-.1px -.1px 0 white,  .1px -.1px 0 white, -.1px  .1px 0 white, .1px  .1px 0 white',
         },
         cardImage: {
             position: 'absolute',
@@ -43,7 +45,7 @@ const ServicesCard = ({ title, description, link, image }) => {
             // transition: 'filter 0.3s ease',
             transition: 'opacity 0.3s ease',
             // filter: 'brightness(70%)',
-            opacity: '45%',
+            // opacity: '45%',
             borderRadius: '1%',
         },
     };
@@ -102,8 +104,8 @@ const ServicesCards = () => {
 const styles = document.createElement("style");
 styles.innerHTML = `
     .card-image:hover {
-        // filter: brightness(40%) !important;
-        opacity: 0.1 !important;
+        filter: brightness(40%) !important;
+        // opacity: 0.1 !important;
     }
 `;
 document.head.appendChild(styles);
