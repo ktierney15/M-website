@@ -84,7 +84,7 @@ const Header = () => {
                 MICHELLE PARENTE HEALTH
               </RouterLink>
             </Typography>
-            <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', marginTop: '10px' }}>
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', marginTop: '1px' }}>
               <IconButton
                 edge="start"
                 color="inherit"
@@ -104,6 +104,11 @@ const Header = () => {
                   <InstagramIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                 </IconButton>
               </Link>
+              {/* <Link href="https://www.fuzehouse.com/" target="_blank" color="inherit">
+                  <IconButton>
+                    <p sx={{ color: scrolled ? 'white' : '#9FA485' }}>FH</p>
+                  </IconButton>
+                </Link> */}
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
               <Box>
@@ -117,6 +122,11 @@ const Header = () => {
                     <InstagramIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                   </IconButton>
                 </Link>
+                {/* <Link href="https://www.fuzehouse.com/" target="_blank" color="inherit">
+                  <IconButton>
+                    <p sx={{ color: scrolled ? 'white' : '#9FA485' }}>FH</p>
+                  </IconButton>
+                </Link> */}
               </Box>
               <Button 
                   variant="contained" 
