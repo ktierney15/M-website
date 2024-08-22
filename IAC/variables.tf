@@ -24,10 +24,10 @@ variable "aws_secret_key" {
 }
 
 # Route 53
-# variable "route53_zone_id" {
-#     type        = string
-#     description = "Hosted Zone Id"        
-# }
+variable "route53_zone_id" {
+    type        = string
+    description = "Hosted Zone Id"        
+}
 
 variable "domain_name" {
     type        = string
