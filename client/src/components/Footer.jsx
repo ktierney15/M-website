@@ -46,12 +46,12 @@ const Footer = () => {
                     value={email}
                     onChange={handleInputChange}
                     required
-                    InputLabelProps={{ style: { color: '#000000' } }}
-                    InputProps={{ style: { color: '#000000', height: '40px' } }}
+                    InputLabelProps={{ style: { color: '#000000', fontFamily: 'Playfair Display' } }}
+                    InputProps={{ style: { color: '#000000', height: '40px', fontFamily: 'Playfair Display' } }}
                     style={{
                       backgroundColor: '#ffffff',
                       borderRadius: '4px',
-                      height: '40px',
+                      height: '40px', 
                     }}
                   />
                   <Button
@@ -64,6 +64,7 @@ const Footer = () => {
                       marginLeft: '10px',
                       borderRadius: '4px',
                       minWidth: '80px',
+                      fontFamily: 'Playfair Display',
                     }}
                   >
                     Join

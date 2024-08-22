@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Box, Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 
-import pose from "../assets/pose.jpeg"
-import lemons from '../assets/lemons.webp';
+import lemons from '../assets/water.jpg';
 
 
 const TextOverlay = styled(Box)({

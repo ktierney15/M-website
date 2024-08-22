@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Grid, Typography, TextField, Button, Checkbox, FormControlLabel, Hidden } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import lemons from '../assets/lemons.webp';
+import lemons from '../assets/journal.jpg';
 
 const theme = createTheme({
   components: {
@@ -114,7 +114,7 @@ const Contact = () => {
             </Grid>
             <Hidden smDown>
               <Grid item xs={12} md={6} style={{ textAlign: 'center' }}>
-                <img src={lemons} alt="StockImage" style={{ width: '80%', height: '80vh', filter: 'brightness(80%)', borderTopLeftRadius: '50%', borderTopRightRadius: '50%' }} />
+                <img src={lemons} alt="StockImage" style={{ width: '80%', height: '75vh', filter: 'brightness(80%)', borderTopLeftRadius: '50%', borderTopRightRadius: '50%' }} />
               </Grid>
             </Hidden>
           </Grid>

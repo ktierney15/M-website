@@ -1,30 +1,35 @@
-variable "aws_access_key" {
-  description = "The AWS access key ID."
-  default     = ""
-}
-
-variable "aws_secret_key" {
-  description = "The AWS secret access key."
-  default     = ""
-}
-
 variable "app_name" {
-  description = "name of application"
-}
-
-variable "version" {
-  description = "version of application"
+    type        = string
+    description = "Name of application"
 }
 
 variable "source_path" {
-  description = "location of your application code"
+    type        = string
+    description = "Path to source code"
 }
 
-variable "cloudfront_origin_path" {
-  description = "cloudfront origin path"
+variable "ver" {
+    type        = string
+    description = "Version of application"
 }
 
-variable "default_root_object" {
-  description = "root object"
-  default = "index.html"
+variable "aws_access_key" {
+    type        = string
+    description = "AWS access key"
+}
+
+variable "aws_secret_key" {
+    type        = string
+    description = "AWS secret key"
+}
+
+# Route 53
+# variable "route53_zone_id" {
+#     type        = string
+#     description = "Hosted Zone Id"        
+# }
+
+variable "domain_name" {
+    type        = string
+    description = "Domain name (existing in route53)"        
 }
