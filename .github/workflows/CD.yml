@@ -44,7 +44,7 @@ jobs:
 
       - name: Build React App
         working-directory: client
-        run: vite build
+        run: npx vite build
 
       - name: Move Build Output to IAC Folder
         working-directory: client
