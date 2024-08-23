@@ -120,9 +120,10 @@ resource "aws_cloudfront_distribution" "cdn" {
   }
 
   viewer_certificate {
-    acm_certificate_arn            = aws_acm_certificate.cert.arn
-    ssl_support_method              = "sni-only"
-    minimum_protocol_version        = "TLSv1.2_2018"
+    # acm_certificate_arn            = aws_acm_certificate.cert.arn
+    # ssl_support_method              = "sni-only"
+    # minimum_protocol_version        = "TLSv1.2_2018"
+    cloudfront_default_certificate = true
   }
 
   custom_error_response {
@@ -140,15 +141,15 @@ resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = "Access Identity for S3 bucket"
 }
 
-resource "aws_acm_certificate" "cert" {
-  domain_name       = var.domain_name
-  subject_alternative_names = ["www.${var.domain_name}"] 
-  validation_method = "DNS"
+# resource "aws_acm_certificate" "cert" {
+#   domain_name       = var.domain_name
+#   subject_alternative_names = ["www.${var.domain_name}"] 
+#   validation_method = "DNS"
 
-  tags = {
-    Name = "${var.domain_name} Certificate"
-  }
-}
+#   tags = {
+#     Name = "${var.domain_name} Certificate"
+#   }
+# }
 
 # resource "aws_route53_record" "cert_validation" {
 #   for_each = {
