@@ -64,6 +64,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: log built app
+        working-directory: ./IAC
+        run: |
+          ls 
+          echo xxxxxxxxxxxx
+          cd build
+          ls
+
       - name: Initialize Terraform
         run: terraform init
         working-directory: ./IAC
