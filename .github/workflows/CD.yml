@@ -49,8 +49,9 @@ jobs:
       - name: Move Build Output to IAC Folder
         working-directory: client
         run: |
-          mkdir -p ./IAC/build
-          mv ./dist/* ./IAC/build/
+
+          mkdir -p ../IAC/build
+          mv ./dist/* ../IAC/build/
       
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2
