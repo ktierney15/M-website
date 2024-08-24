@@ -90,7 +90,7 @@ resource "aws_cloudfront_distribution" "cdn" {
     }
   }
 
-  aliases = ["www.${var.domain_name}", var.domain_name]
+  # aliases = ["www.${var.domain_name}", var.domain_name]
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
