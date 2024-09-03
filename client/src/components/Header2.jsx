@@ -3,7 +3,7 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 import { AppBar, Toolbar, Typography, Box, IconButton, Link, Tabs, Tab, Menu, MenuItem, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import AdjustIcon from '@mui/icons-material/Adjust';
+import TikTok from '@mui/icons-material/MusicNoteOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const theme = createTheme({
@@ -94,9 +94,9 @@ const Header = () => {
               >
                 <MenuIcon />
               </IconButton>
-              <Link href="https://www.corepoweryoga.com/content/teachers/7f5b4bc1-7a2f-4731-bab6-518ff012b399" target="_blank" color="inherit">
+              <Link href="https://www.tiktok.com/@michelle.parente" target="_blank" color="inherit">
                 <IconButton>
-                  <AdjustIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
+                  <TikTok sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                 </IconButton>
               </Link>
               <Link href="https://www.instagram.com/michelleeparente/" target="_blank" color="inherit">
@@ -104,17 +104,12 @@ const Header = () => {
                   <InstagramIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                 </IconButton>
               </Link>
-              {/* <Link href="https://www.fuzehouse.com/" target="_blank" color="inherit">
-                  <IconButton>
-                    <p sx={{ color: scrolled ? 'white' : '#9FA485' }}>FH</p>
-                  </IconButton>
-                </Link> */}
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
               <Box>
-                <Link href="https://www.corepoweryoga.com/content/teachers/7f5b4bc1-7a2f-4731-bab6-518ff012b399" target="_blank" color="inherit">
+                <Link href="https://www.tiktok.com/@michelle.parente" target="_blank" color="inherit">
                   <IconButton>
-                    <AdjustIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
+                    <TikTok sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                   </IconButton>
                 </Link>
                 <Link href="https://www.instagram.com/michelleeparente/" target="_blank" color="inherit">
@@ -122,11 +117,6 @@ const Header = () => {
                     <InstagramIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                   </IconButton>
                 </Link>
-                {/* <Link href="https://www.fuzehouse.com/" target="_blank" color="inherit">
-                  <IconButton>
-                    <p sx={{ color: scrolled ? 'white' : '#9FA485' }}>FH</p>
-                  </IconButton>
-                </Link> */}
               </Box>
               <Button 
                   variant="contained" 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link as RouterLink, useLocation } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Box, IconButton, Link, Tabs, Tab, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, IconButton, Link, Tabs, Tab, Menu, MenuItem, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import AdjustIcon from '@mui/icons-material/Adjust';
+import TikTok from '@mui/icons-material/MusicNoteOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const theme = createTheme({
@@ -28,7 +28,7 @@ const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
   const location = useLocation();
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -57,45 +57,41 @@ const Header = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ padding: 25 }}>
+      <div >
         <AppBar 
           position="fixed"
           sx={{ 
             backgroundColor: scrolled ? '#9FA485' : 'white',
             transition: 'background-color 0.3s',
-            height: '160px',
+            height: '80px',
             boxShadow: 'none',
-            padding: 5,
+            padding: '10px', 
           }}
         >
-          <Toolbar sx={{ minHeight: '60px', flexDirection: 'column', justifyContent: 'center' }}>
-            <Typography 
-              variant="h4" 
-              component="div" 
-              sx={{ 
-                fontWeight: 'bold', 
-                color: scrolled ? 'white' : '#9FA485',
-                textAlign: 'center',
-                paddingTop: '10px',
-              }}
-            >
-              <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                MICHELLE PARENTE HEALTH
-              </RouterLink>
-            </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '10px' }}>
-              <Box sx={{ display: { xs: 'flex', md: 'none' }, paddingRight: '10px' }}>
-                <IconButton
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  onClick={handleMenuOpen}
-                  sx={{ color: scrolled ? 'white' : '#9FA485' }}
-                >
-                  <MenuIcon />
-                </IconButton>
-              </Box>
-              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Toolbar sx={{ minHeight: '60px', justifyContent: 'space-between', flexDirection: 'row' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography 
+                variant="h5" 
+                component="div" 
+                sx={{ 
+                  fontWeight: 'bold', 
+                  color: scrolled ? 'white' : '#9FA485',
+                  paddingTop: '5px',
+                  marginRight: 2,
+                  fontSize: {
+                    xs: '0.9rem',
+                    sm: '1rem',
+                    md: '1.5rem',
+                  },
+                }}
+              >
+                <RouterLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  MICHELLE PARENTE HEALTH
+                </RouterLink>
+              </Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
                 <Tabs 
                   value={menuItems.findIndex(item => item.to === location.pathname)} 
                   textColor="inherit" 
@@ -106,12 +102,9 @@ const Header = () => {
                     '& .MuiTab-root': {
                       color: scrolled ? 'white' : '#9FA485',
                       textDecoration: 'none',
-                      fontSize: '1.1rem',
-                      padding: '8px 12px',
+                      fontSize: '0.9rem',
+                      padding: '6px 8px', 
                       transition: 'color 0.3s',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px',
                     },
                     '& .Mui-selected': {
                       color: scrolled ? 'white' : '#9FA485',
@@ -127,11 +120,28 @@ const Header = () => {
                     />
                   ))}
                 </Tabs>
+                <Button 
+                  variant="contained" 
+                  color="secondary" 
+                  component={RouterLink} 
+                  to="/contact" 
+                  sx={{ 
+                    backgroundColor: scrolled ? 'white' : '#9FA485', 
+                    color: scrolled ? '#9FA485' : 'white',
+                    marginLeft: 2,
+                    fontSize: '0.9rem', 
+                    '&:hover': {
+                      backgroundColor: scrolled ? '#F0F0F0' : '#A9A692',
+                    },
+                  }}
+                >
+                  Work with Me
+                </Button>
               </Box>
-              <Box sx={{ flexGrow: 1, textAlign: 'right' }}>
-                <Link href="https://www.corepoweryoga.com/content/teachers/7f5b4bc1-7a2f-4731-bab6-518ff012b399" target="_blank" color="inherit">
+              <Box sx={{ display: 'flex', alignItems: 'center', padding: "10px" }}> 
+                <Link href="https://www.tiktok.com/@michelle.parente" target="_blank" color="inherit">
                   <IconButton>
-                    <AdjustIcon sx={{ color: scrolled ? 'white' : '#9FA485' }} />
+                    <TikTok sx={{ color: scrolled ? 'white' : '#9FA485' }} />
                   </IconButton>
                 </Link>
                 <Link href="https://www.instagram.com/michelleeparente/" target="_blank" color="inherit">
@@ -140,36 +150,65 @@ const Header = () => {
                   </IconButton>
                 </Link>
               </Box>
+              <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}>
+                <IconButton
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  onClick={handleMenuOpen}
+                  sx={{ color: scrolled ? 'white' : '#9FA485' }}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Box>
             </Box>
           </Toolbar>
-        </AppBar>
-        <Menu
-          anchorEl={anchorEl}
-          open={isMenuOpen}
-          onClose={handleMenuClose}
-          sx={{
-            '& .MuiPaper-root': {
-              backgroundColor: scrolled ? '#9FA485' : 'white',
-            },
-          }}
-        >
-          {menuItems.map((item, index) => (
-            <MenuItem
-              key={index}
-              onClick={handleMenuClose}
-              component={RouterLink}
-              to={item.to}
-              sx={{
-                color: scrolled ? 'white' : '#9FA485',
-                '&:hover': {
-                  backgroundColor: scrolled ? '#A9A692' : '#F0F0F0',
-                },
-              }}
-            >
-              {item.label}
+
+          <Menu
+            anchorEl={anchorEl}
+            open={isMenuOpen}
+            onClose={handleMenuClose}
+            sx={{
+              '& .MuiPaper-root': {
+                backgroundColor: scrolled ? '#9FA485' : 'white',
+              },
+            }}
+          >
+            {menuItems.map((item, index) => (
+              <MenuItem
+                key={index}
+                onClick={handleMenuClose}
+                component={RouterLink}
+                to={item.to}
+                sx={{
+                  color: scrolled ? 'white' : '#9FA485',
+                  '&:hover': {
+                    backgroundColor: scrolled ? '#A9A692' : '#F0F0F0',
+                  },
+                }}
+              >
+                {item.label}
+              </MenuItem>
+            ))}
+            <MenuItem onClick={handleMenuClose} sx={{ justifyContent: 'center', color: scrolled ? 'white' : '#9FA485' }}>
+              <Button 
+                variant="contained" 
+                color="secondary" 
+                component={RouterLink} 
+                to="/contact" 
+                sx={{ 
+                  backgroundColor: scrolled ? 'white' : '#9FA485', 
+                  color: scrolled ? '#9FA485' : 'white',
+                  '&:hover': {
+                    backgroundColor: scrolled ? '#F0F0F0' : '#A9A692',
+                  },
+                }}
+              >
+                Work with Me
+              </Button>
             </MenuItem>
-          ))}
-        </Menu>
+          </Menu>
+        </AppBar>
       </div>
     </ThemeProvider>
   );
