@@ -50,7 +50,7 @@ const Line = styled(Box)({
   position: 'absolute',
   width: '80%',
   height: '1px',
-  backgroundColor: 'white',
+  backgroundColor: 'black',
   left: '50%',
   transform: 'translate(-50%, -50%)',
 });
@@ -58,10 +58,10 @@ const Line = styled(Box)({
 const FullWidthSection = styled(Box)(({ theme }) => ({
   width: '100%',
   textAlign: 'center',
-  marginTop: 110,
+  marginTop: 70,
   paddingTop: 40,
   paddingBottom: 20,
-  color: 'white',
+  color: 'black',
   '& h2': {
     fontSize: '3rem', // Default font size for larger screens
     [theme.breakpoints.down('md')]: {
@@ -77,7 +77,7 @@ const HomePage = () => {
   return (
     <div>
       {/* Header Section */}
-      <div style={{ backgroundColor: '#94685E', margin: 20 }}>
+      <div style={{ backgroundColor: '#E7D9CB', margin: 20 }}>
       <FullWidthSection>
         <Typography variant="h5">{sections.section1.textSmall}</Typography>
         <Typography variant="h2">{sections.section1.textLarge}</Typography>

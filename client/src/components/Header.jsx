@@ -65,7 +65,7 @@ const Header = () => {
             transition: 'background-color 0.3s',
             height: '80px',
             boxShadow: 'none',
-            padding: '10px', 
+            padding: '10px',
           }}
         >
           <Toolbar sx={{ minHeight: '60px', justifyContent: 'space-between', flexDirection: 'row' }}>

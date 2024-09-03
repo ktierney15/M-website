@@ -31,7 +31,7 @@ const TextOverlay = styled(Box)({
 
 const Fitness = () => {
     return (
-        <div style={{ paddingTop: 110 }}>
+        <div style={{ paddingTop: 70 }}>
             {/* 1:1 Section */}
             <div style={{ padding: 10 }}>
             <Grid container spacing={0} sx={{ height: '55vh', padding: 2, backgroundColor: '#E7D9CB' }}>
@@ -59,10 +59,9 @@ const Fitness = () => {
                     </Box>
                 </Grid>
             </Grid>
-            </div>
+            {/* </div>
 
-            {/* Group Section */}
-            <div style={{ padding: 10 }}>
+            <div style={{ padding: 10 }}> */}
             <Grid container spacing={0} sx={{ height: '55vh', padding: 2, backgroundColor: '#E7D9CB' }}>
                 <Grid item xs={12} md={6} display="flex" justifyContent="center" alignItems="center">
                     <Box textAlign="center">

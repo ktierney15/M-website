@@ -8,7 +8,7 @@ import head1 from '../assets/head1.jpeg';
 const About = () =>{
     return (
         <div>
-            <div style={{ paddingTop: 150, color: "black" }}>
+            <div style={{ paddingTop: 85, color: "black" }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 20, overflow: 'hidden' }}>
                         <div style={{ width: '80%', height: 'auto', position: 'relative' }}>

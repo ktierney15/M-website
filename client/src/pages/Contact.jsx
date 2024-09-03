@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <div style={{ paddingTop: 150, paddingBottom: 40, paddingLeft: 20, paddingRight: 20 }}>
+        <div style={{ paddingTop: 85, paddingBottom: 40, paddingLeft: 20, paddingRight: 20 }}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <div style={{ color: 'black', margin: 10, padding: 10 }}>
