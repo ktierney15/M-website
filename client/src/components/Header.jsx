@@ -80,7 +80,7 @@ const Header = () => {
                   marginRight: 2,
                   fontSize: {
                     xs: '0.7rem',
-                    sm: '1rem',
+                    sm: '0.9rem',
                     md: '1.5rem',
                   },
                 }}
