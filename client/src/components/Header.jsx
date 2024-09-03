@@ -79,7 +79,7 @@ const Header = () => {
                   paddingTop: '5px',
                   marginRight: 2,
                   fontSize: {
-                    xs: '0.7rem',
+                    xs: '0.5rem',
                     sm: '0.9rem',
                     md: '1.5rem',
                   },
